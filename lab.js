@@ -20,6 +20,12 @@ me = {
 //and goodBoy/goodGirl (a boolean).
 
 //Code here
+dog = {
+  name: "busker",
+  color: "brown",
+  age: 5,
+  goodBoy: true
+};
 
 
 
@@ -27,6 +33,7 @@ me = {
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
 //Code here
+console.log(dog.name);
 
 
 
