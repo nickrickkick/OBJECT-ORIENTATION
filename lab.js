@@ -267,6 +267,23 @@ wizardKyle.castSpell();
 */
 
 //Code Here
+class Phone {
+  constructor(brand, model, storage, color, price,){
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.price = price;
+    this.sold = false;
+  }
+  sell = () => {
+    this.sold = true;
+    console.log(`${this.brand} ${this.model} has been sold.`);
+  }
+  changePrice = newPrice => {
+    this.price = newPrice;
+  }
+}
 
   
 /*
@@ -280,6 +297,9 @@ wizardKyle.castSpell();
 */
 
 //Code Here
+let blueBlur = new Phone("blury", "T43E9", 325, "blue", 380);
+let fireyRed = new Phone("firey", "fedu93", 452, "red", 450);
+let greenerThenGreen = new Phone("greener", "gre3n3r44", 121, "green", 4546);
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -289,6 +309,8 @@ wizardKyle.castSpell();
 */ 
 
 //Code Here 
+fireyRed.changePrice(390);
+console.log(fireyRed);
 
 
 /*
@@ -298,6 +320,8 @@ wizardKyle.castSpell();
 */
 
 //Code Here 
+blueBlur.sell();
+console.log(blueBlur.sold);
 
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
@@ -317,6 +341,8 @@ const colors = {
 //do not edit this object
 
 //Code Here 
+let colorsCopy = {...colors};
+console.log(colorsCopy);
 
 
 
