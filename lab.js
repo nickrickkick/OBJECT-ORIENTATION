@@ -41,6 +41,7 @@ console.log(dog.name);
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
+console.log(dog['color']);
 
 
 
@@ -51,6 +52,14 @@ console.log(dog.name);
 */
 
 //Code here
+favoriteThings = {
+  band: "Hog",
+  food: "pizza",
+  person: "Lovecraft",
+  book: "At the Mountains of Madness",
+  movie: "Color Out of Space",
+  holiday: "xmas"
+};
 
 
 /*
@@ -58,6 +67,7 @@ console.log(dog.name);
 */
 
 //Code here
+favoriteThings.car = "bug";
 
 
 /*
@@ -66,6 +76,8 @@ console.log(dog.name);
 */
 
 //Code here
+favoriteThings.food = "Chicken Nuggets";
+favoriteThings.book = "Harry Potter";
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -84,6 +96,11 @@ var carDetails = {
 */
 
 //Code Here
+const {color: toyColor} = carDetails;
+const {make: toyMake} = carDetails;
+const {model: toyModel} = carDetails;
+const {year: toyYear} = carDetails;
+console.log(toyColor + toyMake + toyModel + toyYear);
 
 
 
@@ -97,6 +114,9 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+  const {firstName: nameFirst} = obj;
+  const {lastName: nameLast} = obj;
+  const {title: nameTitle} = obj;
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -116,6 +136,13 @@ function greeting( obj ) {
 */
 
 //Code Here
+totalPopulation = obj => {
+  const {utah: utahNumber} = obj;
+  const {california: caliNumber} = obj;
+  const {texas: texasNumber} = obj;
+  const {arizona: arizonaNumber} = obj;
+  return utahNumber + caliNumber + texasNumber + arizonaNumber;
+}
 
 
 
