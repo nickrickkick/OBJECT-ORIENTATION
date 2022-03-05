@@ -229,6 +229,19 @@ console.log(cat1.name);
 */
 
 //Code here
+class Wizard {
+  constructor(name, age, favoriteSpell){
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+  castSpell = obj => {
+    console.log(`${this.name} has cast ${this.favoriteSpell}.`);
+  }
+}
+let wizardKyle = new Wizard("kyle", 45, "fireball");
+wizardKyle.castSpell();
+
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
