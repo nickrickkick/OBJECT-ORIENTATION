@@ -157,6 +157,14 @@ totalPopulation = obj => {
 */
 
 //Code Here
+ingredients = obj => {
+  const {carb: carbName} = obj;
+  const {fat: fatName} = obj;
+  const {protein: proteinName} = obj;
+  let newArr = [];
+  newArr.push(carbName, fatName, proteinName);
+  return newArr;
+}
 
 
 
@@ -179,6 +187,8 @@ var user = {
 */
 
 //Code Here
+user.name = 'Bryan G. Smith';
+user.email = 'bryan.smith@devmounta.in';
 
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
@@ -187,6 +197,7 @@ var user = {
 */
 
 //Code Here
+delete user.age;
 
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
@@ -197,6 +208,15 @@ var user = {
 */
 
 //Code here
+class Cat {
+  constructor(name, age, color){
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+}
+let cat1 = new Cat('ketchup', 2, 'red');
+console.log(cat1.name);
 
 
 
