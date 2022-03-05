@@ -371,6 +371,11 @@ const shippingInfo = {
 //do not edit the objects above
 
 //Code Here
+const helensInfo = {
+  ...contactInfo,
+  ...shippingInfo
+};
+console.log(helensInfo);
 
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
@@ -389,6 +394,17 @@ const shippingInfo = {
 */
 
 //Code Here 
+class Vehicle {
+  constructor(capacity, color, mileage){
+    this.capacity = capacity;
+    this.color = color;
+    this.mileage = mileage;
+  }
+  move = miles => {
+    this.mileage += miles;
+    console.log(this.mileage);
+  }
+}
 
 
 /*
@@ -396,6 +412,8 @@ const shippingInfo = {
 */
 
 //Code Here
+let bug = new Vehicle(4, "green", 11422);
+bug.move(125);
 
 
 /* 
@@ -407,12 +425,22 @@ const shippingInfo = {
 */
 
 //Code Here
+class Motorcycle extends Vehicle {
+  constructor(capacity, color, mileage, make, isCool){
+    super(capacity, color, mileage)
+    this.make = make;
+    this.isCool = isCool;
+  }
+
+}
 
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
 
 //Code Here 
+let myFirstMotorcycle = new Motorcycle(1, "black", 1230, "hotwheels", "yes");
+myFirstMotorcycle.move(23);
 
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
@@ -435,6 +463,20 @@ const shippingInfo = {
 */
 
 //Code Here
+class Boat extends Vehicle {
+  constructor(capacity, color, mileage, name, type, isSeaworthy){
+    super( capacity, color, mileage);
+    this.name = name;
+    this.type = type;
+    this.isSeaworthy = isSeaworthy;
+  }
+  checkSeaworthiness = () => {
+    this.isSeaworthy === true ? console.log("is seaworthy!") : console.log(`You need to get your ${this.type} in shape`);
+  }
+  performMaintenance = () => {
+    this.isSeaworthy = true;
+  }
+}
 
 
 /*
@@ -443,21 +485,25 @@ const shippingInfo = {
 */
 
 //Code Here
+let myFirstBoat = new Boat(8, "white", 1235, "bessy", "whale", false);
 
 /*
   Call the checkSeaworthiness method on your new boat
 */
 
 //Code Here
+myFirstBoat.checkSeaworthiness();
 
 /*
   Now run the performMaintenance method on your boat
 */
 
 //Code Here 
+myFirstBoat.performMaintenance();
 
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
 //Code Here
+myFirstBoat.checkSeaworthiness();
